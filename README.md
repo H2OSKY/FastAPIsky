@@ -31,9 +31,6 @@ Este proyecto implementa un API CRUD básica con FastAPI, SQLAlchemy, jinja y ba
     pip install fastapi
     pip install "uvicorn[standard]"
     pip install python-multipart sqlalchemy jinja2
-    python -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
     ```
 5. Inicia el servidor de desarrollo
     ```
