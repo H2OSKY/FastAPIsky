@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="container mt-5">
+            <h1>FastAPI CRUD</h1>
+            <br>
+            <!--Table-->
+            <table id="example" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Names</th>
+                        <th scope="col">Emails</th>
+                        <th scope="col">Passwords</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    {% for rs in users %}
+                    <tr>
+                        <td>{{ rs.name }}</td>
+                        <td>{{ rs.email }}</td>
+                        <td>{{ rs.password}}</td>
+                        <td>
+                            <button class="btn btn-outline-warning update-btn" data-item-id="{{ rs.id }}">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn btn-outline-danger delete-btn" data-item-id="{{ rs.id }}"><i
+                                    class="bi bi-trash3-fill"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <!--Fin Table-->
+        
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+        
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Item</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Name:</span>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Email:</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+        
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn btn-outline-warning" id="Update">Update</button>
+                            <button class="btn btn-outline-danger" id="Delete">Delete</button>
+                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close <i
+                                    class="bi bi-x-circle"></i></button>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Moda -->
+        </div>
+        <br>
+        <a href="addnew/" class="btn btn-outline-primary">Add</a>
+    </div>
+
+
+</div>
+
+{% endblock content %}

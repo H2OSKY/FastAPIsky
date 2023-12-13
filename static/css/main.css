@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Noto';
+    src: url("../../fonts/NotoSans.woff") format("woff2"), url("../../fonts/NotoSans.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
