@@ -5,7 +5,7 @@
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">FastAPIsky</h6>
+            <h6 class="mb-0">Users</h6>
             <a href="">Show All</a>
         </div>
         <div class="table-responsive">
@@ -26,11 +26,11 @@
                         <td>{{ rs.email }}</td>
                         <td>{{ rs.password}}</td>
                         <td>
-                            <button class="btn btn-outline-warning update-btn" data-item-id="{{ rs.id }}">
-                                <i class="bi bi-pencil-square"></i>
+                            <button class="btn update-btn" data-item-id="{{ rs.id }}">
+                                <img src="/static/img/lapiz.png" alt="">
                             </button>
-                            <button class="btn btn-outline-danger delete-btn" data-item-id="{{ rs.id }}"><i
-                                    class="bi bi-trash3-fill"></i>
+                            <button class="btn delete-btn" data-item-id="{{ rs.id }}">
+                                <img src="/static/img/borrar.png" width="25"  alt="">
                             </button>
                         </td>
                     </tr>
@@ -39,7 +39,9 @@
             </table>
             <!--Fin Table-->
         </div>
-        <a href="addnew/" class="btn btn-outline-primary">Add</a>
+        <a href="addnew/" class="btn btn-outline-primary">Add
+            <img src="/static/img/agregar-usuario.png" alt="">
+        </a>
     </div>
 </div>
 
