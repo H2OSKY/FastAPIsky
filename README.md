@@ -1,6 +1,6 @@
 # FastAPIsky CRUD
 
-Este proyecto implementa un API CRUD básica con FastAPI, SQLAlchemy, jinja y bases de datos SQLite.
+Este proyecto implementa un API CRUD básica con FastAPI, SQLAlchemy, Jinja2Templates y bases de datos SQLite.
 
 ## Requisitos
 
@@ -48,4 +48,4 @@ La aplicación provee las siguientes rutas:
 - `POST /add` - Endpoint para agregar un nuevo usuario
 - `GET /get_item/{user_id}` - Obtiene un usuario por ID 
 - `PUT /update/{user_id}` - Actualiza un usuario existente
-- `DELETE /delete/{user_id}` - Elimina un usuario
+- `DELETE /delete/{user_id}` - Elimina un usuario por ID
