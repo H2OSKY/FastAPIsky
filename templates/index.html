@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12">
-        <div class="w3-container w3-center w3-animate-top">
-            <h1>FastAPIsky</h1>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">FastAPIsky</h6>
+            <a href="">Show All</a>
         </div>
-        <div class="container mt-5">
+        <div class="table-responsive">
             <!--Table-->
             <table id="example" class="table table-bordered table-striped">
-                <thead>
+                <thead class="table-primary">
                     <tr>
                         <th scope="col">Names</th>
                         <th scope="col">Emails</th>
@@ -36,48 +38,46 @@
                 </tbody>
             </table>
             <!--Fin Table-->
-        
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-        
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Item</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-        
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Name:</span>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Email:</span>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-        
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button class="btn btn-outline-warning" id="Update">Update</button>
-                            <button class="btn btn-outline-danger" id="Delete">Delete</button>
-                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close <i
-                                    class="bi bi-x-circle"></i></button>
-                        </div>
-        
-                    </div>
-                </div>
-            </div>
-            <!-- Fin Moda -->
         </div>
-        <br>
         <a href="addnew/" class="btn btn-outline-primary">Add</a>
     </div>
-
-
 </div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Item</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name:</span>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email:</span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-outline-warning" id="Update">Update</button>
+                <button class="btn btn-outline-danger" id="Delete">Delete</button>
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close <i
+                        class="bi bi-x-circle"></i></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Fin Moda -->
+
 
 {% endblock content %}
