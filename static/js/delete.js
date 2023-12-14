@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Password:</span>
-                    <input type="text" class="form-control" id="passwordInput" value="${itemDetails.password}">
+                    <input type="text" class="form-control" id="passwordInput" value="${itemDetails.password}" readonly>
                 </div>
             `;
 
