@@ -55,6 +55,13 @@ async def add(request: Request, item: Item, db: Session = Depends(get_db)):
 async def addnew(request: Request):
     return templates.TemplateResponse("addnew.html", {"request": request})
 
+@app.get("/cards", tags=["Cards"])
+async def addnew(request: Request):
+    return templates.TemplateResponse("cards.html", {"request": request})
+
+@app.get("/carousel", tags=["Carousel"])
+async def addnew(request: Request):
+    return templates.TemplateResponse("carousel.html", {"request": request})
 
 @app.get("/get_item/{user_id}", response_class=JSONResponse)
 async def get_item(user_id: int, db: Session = Depends(get_db)):
