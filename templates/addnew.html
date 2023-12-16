@@ -7,7 +7,12 @@
     <div class="row g-4">
         <div class="col-sm-12 col-xl-6">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Create User</h6>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Create User</h6>
+                    <button class="btn btn-outline-primary" id="submitButton">Create Item
+                        <img src="/static/img/agregar-usuario.png" alt="">
+                    </button>
+                </div>
                 <form class="mb-4 was-validated" id="myForm">
                     <div class="form-group">
                         <label for="name">Name:</label>
@@ -29,17 +34,18 @@
                         <div class="valid-feedback">Valid.</div>
                         <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
-                    <br>
-                    <button class="btn btn-outline-primary" id="submitButton">Create Item
-                        <img src="/static/img/agregar-usuario.png" alt="">
-                    </button>
                 </form>
             </div>
         </div>
 
         <div class="col-sm-12 col-xl-6">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Create Password</h6>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h6 class="mb-0">Create Password</h6>
+                    <button type="button" class="btn btn-outline-primary" id="Password">Generate password
+                        <img src="/static/img/contrasena.png" alt="">
+                    </button>
+                </div>
                 <form id="passwordForm" class="mb-4 was-validated">
                     <div class="form-group">
                         <label for="length">password length:</label>
@@ -73,10 +79,6 @@
                                 especiales</label>
                         </div>
                     </div>
-                    <br>
-                    <button type="button" class="btn btn-outline-primary" id="Password">Generate password
-                        <img src="/static/img/contrasena.png" alt="">
-                    </button>
                 </form>
             </div>
         </div>
